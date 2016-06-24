@@ -15,7 +15,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>QRAGadget</h1>
+        <h1>Qragadget</h1>
         <p>A Shiny Gadget for Interactive QRA Visualizations</p>
 
         <p class="view"><a href="https://github.com/paulgovan/QRAGadget">View the Project on GitHub <small>paulgovan/QRAGadget</small></a></p>
@@ -46,7 +46,7 @@
 <h1>
 <a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h1>
 
-<p>QRAGadget is a Shiny Gadget for creating interactive QRA visualizations. QRAGadget is powered by the excellent <a href="http://leafletjs.com/">leaflet</a> and <a href="https://cran.r-project.org/web/packages/raster/vignettes/Raster.pdf">raster</a> packages. While this gadget was initially intended for those interested in creating QRA visualizations, it may also be of use to anyone interested in visualizing raster data in a leaflet map. </p>
+<p>QRAGadget is a <a href="http://shiny.rstudio.com/articles/gadgets.html">Shiny Gadget</a> for creating interactive QRA visualizations. QRAGadget is powered by the excellent <a href="http://leafletjs.com/">leaflet</a> and <a href="https://cran.r-project.org/web/packages/raster/vignettes/Raster.pdf">raster</a> packages. While this gadget was initially intended for those interested in creating QRA visualizations, it may also be of use to anyone interested in visualizing raster data in an interactive map. </p>
 
 <h1>
 <a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h1>
@@ -56,7 +56,7 @@
 <pre><code>devtools::install_github('paulgovan/QRAGadget')
 </code></pre>
 
-<p>After installation is complete, and if you are using <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> (v0.99.878 or later), QRAGadget will appear in the Addins dropdown menu. Otherwise, to launch the gadget, simply type:</p>
+<p>After installation, and if you are using <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> (v0.99.878 or later), the gadget will appear in the <em>Addins</em> dropdown menu. Otherwise, to launch the gadget, simply type:</p>
 
 <pre><code>QRAGadget()
 </code></pre>
@@ -80,12 +80,14 @@
 
 <p>At this point, you should see the <em>Search</em> page. To find your dummy data, click <em>R Object</em> under <strong>Data Type</strong>, and then select <em>sample</em> from the dropdown menu.</p>
 
-<p><img src="https://github.com/paulgovan/QRAGadget/blob/master/images/Search.PNG?raw=true" alt="Search Page"></p>
+<p>Choose a name for your html file. After you are done customizing your map, click <em>Done</em> to create a standalone html file in your working directory. If at any time you need to start over, click <em>Cancel</em>.</p>
+
+<p><img src="https://github.com/paulgovan/QRAGadget/blob/master/images/Search%20Page.png?raw=true" alt="Search Page"></p>
 
 <h2>
 <a id="raster" class="anchor" href="#raster" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Raster</h2>
 
-<p>To format your raster image, click the <em>Raster</em> icon. Here you will see options for specifying the extents of your raster image (XMIN, XMAX, YMIN, and YMAX) as well as the <a href="https://rstudio.github.io/leaflet/raster.html">projection</a> of your raster layer. It is very important that your raster layer is tagged with the correct project coordinate reference system. Finally, you can specify the number of bins for your color palette.</p>
+<p>To format your raster image, click the <em>Raster</em> icon. Here you will see options for specifying the extents of your raster image (XMIN, XMAX, YMIN, and YMAX) as well as the <a href="https://rstudio.github.io/leaflet/raster.html">projection</a> of your raster layer. It is very important that your raster layer is tagged with the correct project coordinate reference system. Finally, you can specify the number of bins for your color palette, and/or the cut values for each bin.</p>
 
 <p>For this example, let's use the default values for XMIN, XMAX, YMIN, and YMAX as well as the given projection:</p>
 
@@ -94,7 +96,7 @@
 <h2>
 <a id="map" class="anchor" href="#map" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Map</h2>
 
-<p>To view your interactive QRA map, click the <em>Map</em> icon. If at any time you want to reset the extents of your map, simply click the <em>Reset</em> button.</p>
+<p>To view your interactive map, click the <em>Map</em> icon. If at any time you want to reset the extents of your map, simply click the <em>Reset</em> button.</p>
 
 <p><img src="https://github.com/paulgovan/QRAGadget/blob/master/images/map2.PNG?raw=true" alt="Map Page"></p>
 
